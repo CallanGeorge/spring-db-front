@@ -115,6 +115,11 @@ function App() {
         </button>
       </form>
       <table>
+        <tr>
+          <th>Munro Name</th>
+          <th>Weather</th>
+          <th>Height</th>
+        </tr>
         {munro &&
           munro.map((munro) => (
             <tr>
