@@ -16,7 +16,9 @@ function App() {
 
   const getMunros = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/v1/munros");
+      const response = await axios.get(
+        "http://ec2-13-50-109-239.eu-north-1.compute.amazonaws.com:8080/api/v1/munros"
+      );
       {
         console.log(response);
       }
