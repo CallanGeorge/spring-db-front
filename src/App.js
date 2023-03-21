@@ -34,7 +34,7 @@ function App() {
     console.log(id);
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/v1/munros/${id}`
+        `http://ec2-13-50-109-239.eu-north-1.compute.amazonaws.com:8080/api/v1/munros${id}`
       );
 
       const singleMunro = response.data;
@@ -51,7 +51,7 @@ function App() {
     console.log(weather);
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/v1/munros/weather/${weather}`
+        `http://ec2-13-50-109-239.eu-north-1.compute.amazonaws.com:8080/api/v1/munros/weather/${weather}`
       );
 
       const singleMunro = response.data;
@@ -67,7 +67,7 @@ function App() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/v1/munros/add",
+        "http://ec2-13-50-109-239.eu-north-1.compute.amazonaws.com:8080/api/v1/munros/add",
         { name, height, weather }
       );
     } catch (error) {
